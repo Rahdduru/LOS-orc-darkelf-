@@ -16,3 +16,9 @@ lenght함수를 이용해 pw의 비밀번호의 길이를 알아준다.<br><br>
 ?pw='or id='admin' and substr(pw,{ },1)=char({ })%23<br><br>
 
 길이가 8일 때 참이 되는 것을 확인했다.<br>
+(master 브랜치로 가면 python을 이용해 substr코드가 있을 것이다.)<br>
+python을 이용해 돌려주면 pw는 095a9852 것이 나온다!!<br><br>
+
+?pw=095A9852
+
+### #orc#
