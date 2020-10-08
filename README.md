@@ -13,4 +13,6 @@ if(($result['pw']) && ($result['pw'] == $_GET['pw'])) solve("orc"); <br>
 우선 admin에 대한 비밀번호의 길이를 먼저 파악한다.<br>
 lenght함수를 이용해 pw의 비밀번호의 길이를 알아준다.<br><br>
 
-?pw=' or id= 'admin' and length(pw)={}%23
+?pw='or id='admin' and substr(pw,{ },1)=char({ })%23<br><br>
+
+길이가 8일 때 참이 되는 것을 확인했다.<br>
